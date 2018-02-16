@@ -1,0 +1,12 @@
+runtime: php55
+api_version: 1
+handlers:
+ - url: /
+   script: index.php
+ - url: /grades
+   script: get_student_grades.php
+
+env_variables:
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/folkloric-byway-194521:us-east1:students;dbname=students
+  MYSQL_USER: root
+  MYSQL_PASSWORD: root

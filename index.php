@@ -9,10 +9,16 @@
     <title>Student Grades</title>
   </head>
   <body>
+  	<div class="container">
+  		<div class="jumbotron">
+  			<h2>Welcome To The Student Grades Database!</h2>
+  		</div>
+  	</div>
 <?php
 $dsn = getenv('MYSQL_DSN');
 $user = getenv('MYSQL_USER');
 $password = getenv('MYSQL_PASSWORD');
+
 
 $db = new PDO($dsn, $user, $password);
 $statement = $db->prepare("SELECT * FROM grades;");
